@@ -1,0 +1,32 @@
+A)Code for conditional probability:
+
+pofB=float(input("Enter number of C programmers in percentage ")) 
+pofAandB=float(input("Enter number of C and Java programmers in percentage ")) 
+pofB=pofB/100
+pofAandB=pofAandB/100
+print("Event A that student is Java Progammer=?") 
+print("Event B that student is C Progammer=",pofB)
+print("Event A and B that is student knowing both C and Java is =",pofAandB) 
+print("Lets Calculate P(A|B)= P(A and B) / P(B)")
+pAgivenB=pofAandB / pofB 
+print("P(A|B)=",pAgivenB)
+print("There are ",pAgivenB *100," % chances that the student that knows C also knowsJava")
+
+
+B)Code for Joint Probability:
+
+cardnumber=input("Enter number of Card") 
+cardcolor=input("Enter color of Card") 
+pofA=4/52
+pofB=26/52
+print("p(A)=>Probablility of drawing card 
+with number 
+",cardnumber,"=",round(pofA,2))
+print("p(B)=>Probablility of drawing card with color ",cardcolor," =",round(pofB,2)) 
+print("Joint Probablity of A and B=P(A) * P(B)")
+pAandB=round(pofA pofB,2) 
+print("P(A and B)=",pAandB)
+print("There are ",pAandB *100," % chances that of getting ",cardcolor, “ card with number”, cardnumber)
+
+
+

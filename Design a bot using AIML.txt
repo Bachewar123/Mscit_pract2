@@ -1,0 +1,36 @@
+1)std-startup.xml
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- std-startup.xml -->
+<category>
+<pattern>LOAD</pattern>
+<template>
+<learn>basic_chat.aiml</learn>
+</template>
+</category>
+</aiml>
+
+2)basic_chat.aiml
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+<category>
+<pattern>HELLO I AM *</pattern>
+<template> HELLO <set name="username"> <star/> </set> </template>
+</category>
+<category>
+<pattern>I LIKE * COLOR</pattern>
+<template><star index="1"/> is a nice color.</template>
+</category>
+<category>
+<pattern>BYE</pattern>
+<template> BYE <get name="username"/> THANKS FOR THECONVERSATION.
+</template>
+</category>
+</aiml>
+
+3)testbot.py
+import aiml
+kernel = aiml.Kernel() 
+kernel.learn("F:\\aaipracts\\std-startup.xml") kernel.learn("F:\\aaipracts\\basic_chat.aiml") kernel.respond("LOAD")
+# Press CTRL-C to break this loopwhile 
+True:
+print( kernel.respond(input("Enter your message >> ")))
